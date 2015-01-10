@@ -1,0 +1,180 @@
+* {
+margin:0;
+padding:0;
+}
+
+body {
+	font:normal 100% Helvetica, Arial, sans-serif;
+	background:url('../images/bg.jpg') repeat; 
+	width:100%;
+}
+
+ul {
+list-style:none;
+list-style-type:none;
+}
+
+a {
+	text-decoration:none;
+}
+
+#well_main {
+width:100%;
+height:auto;
+min-height:400px;
+margin:0 auto;
+ overflow:hidden;
+}
+
+#myCarousel img {
+max-width:100%;
+width:100%;
+height:auto;
+}
+#myCarousel{
+	margin:0;
+	height:auto;
+}
+
+ 
+#shop {
+	width:100%;
+	margin:0;
+	height:auto;
+}
+ 
+#shop_content {
+	margin:0 auto; 
+	padding:0;
+	height:auto;
+	width:100%;
+	min-width:200px;
+	min-height:350px;-moz-border-radius: 3px;
+	-moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+	border-bottom: 2px solid #e2e2e9;
+	opacity:0.75;
+	font-family:BebasNeueRegular, 'Arial Narrow', Arial, sans-serif;
+	text-shadow:1px 1px 1px rgba(0,0,0,0.1);background-color: #fff;
+}
+ 
+ .form-signin{
+	padding-top:10%;
+	width:100%;
+	display:block;
+	height:auto;
+ }
+ 
+  .form-signin p{
+    height:60px;
+  }
+ 
+ input[type="text"],
+input[type="password"]{
+	margin:0;
+  	width:100%;
+	height:30px;
+ 	font-size: 14px;
+ 	line-height: 40px;
+ 	color: #555555;
+ 	vertical-align: middle;	 
+ }
+ 
+ .info{
+	display:block;
+	line-height:40px;
+	width:20%; text-align:right;
+	float:left;
+	height:50px;
+	margin-right:10px;
+}
+
+ .info label{
+	height:40px;
+	line-height:40px;
+	vertical-align: middle;	 
+ }
+
+.info_input{
+	height:40px;
+	line-height:40px;
+	display:block;
+	width:60%;
+	float:left;
+	height:50px;
+}
+
+.info_code{
+	height:40px;
+	line-height:40px;
+	display:block;
+	width:30%;
+	margin-right:20px;
+	float:left;
+	height:50px;
+}
+
+.info_code_send{
+	min-width:30%;
+	line-height:40px;
+	display:block;
+	width:10%;
+	float:left;
+	text-align:center;
+}
+
+.info_input_button{
+	float:left;
+	padding:0;
+	margin:0;
+}
+
+ .login_input1{
+	background: no-repeat url('../images/username.gif') 96%;
+ }
+ 
+ .login_input2{
+	background: no-repeat url('../images/password.gif') 96% ;
+ }
+ 
+ #footer{
+	border-top: 1px solid #ccc;
+	background-color: #fff;
+	text-align: center;
+	color: #999;
+	height:auto;
+	min-height:30px;
+	padding:30px;
+}
+ 
+ 
+ 
+ 
+ button{
+	margin-top: 10px;
+ }
+ 
+ .btn{}
+ 
+ .btn:hover{
+	font-weight:bold;
+	color:#ccc;
+ }
+ 
+ .orange{
+   /*GRADIENT*/  
+  background: #FD7D22; /* Old browsers */
+}
+
+
+.blue{
+	 background: #00b7ea; /* Old browsers */
+}
+
+.red{
+	background:#d7e5f5;
+}
+
+.green{
+	background-color: #7fbf4d;
+}

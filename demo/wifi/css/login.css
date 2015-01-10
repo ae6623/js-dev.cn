@@ -1,0 +1,97 @@
+* {
+margin:0;
+padding:0;
+}
+
+body {
+	font:normal 100% Helvetica, Arial, sans-serif;
+	background:url('../images/bg.jpg') repeat; 
+	width:100%;
+}
+
+ul {
+list-style:none;
+list-style-type:none;
+}
+
+a {
+	text-decoration:none;
+}
+
+#well_main {
+	width:100%;
+	height:100%;
+	margin-top:20px;
+}
+
+ 
+#shop {
+	margin:0 auto;
+	width:96%;
+}
+ 
+#shop_content {
+	margin:20% auto;
+   	min-width:100px;
+	opacity:0.75;
+	font-family:BebasNeueRegular, 'Arial Narrow', Arial, sans-serif;
+	min-height:150px;
+	color:#7cbcd6;
+	text-shadow:1px 1px 1px rgba(0,0,0,0.1);
+}
+ 
+ 
+input[type="text"],
+input[type="password"]{
+	margin:0;
+  	width:100%;
+	height:30px;
+ 	font-size: 14px;
+ 	line-height: 30px;
+ 	color: #555555;
+ 	vertical-align: middle;	 
+ }
+ 
+button[type="submit"]{
+  	font-size: 14px;
+ 	line-height: 20px;
+  	color: #555555;
+  	vertical-align: middle;
+}
+ 
+ 
+ .login_input1{
+	background: no-repeat url('../images/username.gif') 96%;
+	height:5px;
+ }
+ 
+ .login_input2{
+	background: no-repeat url('../images/password.gif') 96% ;
+	height:5px;
+ }
+ 
+ #btn{padding: 4px 6px;
+	width:100%;
+	min-width:100px;
+ }
+ 
+ .btn{
+	color:#fff;
+	width:100%;
+	height:50px;min-width:100px;
+	background:#7cbcd6;
+ }
+ 
+ button{
+	margin-top: 30px;
+ }
+ 
+ .btn:hover{
+	font-weight:bold;
+	color:#ccc;
+ }
+ 
+ .orange{
+   /*GRADIENT*/  
+  background: #FD7D22; /* Old browsers */
+}

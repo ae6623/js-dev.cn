@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="not-ie" lang="en">
+<!--<![endif]-->
+<head>
+	<title>注册</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="css/buttons-02.css" type="text/css" media="screen">
+	<!-- 
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+	-->
+	<link href="css/zc.css" rel="stylesheet" media="screen"></head>
+<body>
+	<div id="well_main">
+	  	<!-- Carousel 轮播插件
+    ================================================== -->
+		<div id="myCarousel" class="carousel slide">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="images/wiff_Top.jpg"  alt=""></div>
+				<div class="item">
+					<img src="images/wiff_Top.jpg"   alt=""></div>
+				<div class="item">
+					<img src="images/wiff_Top.jpg"  alt=""></div>
+			</div>
+		</div>
+		<!-- 
+	 ================================================== -->
+		<div id="shop">
+			<div id="shop_content">
+				 <form action="user_login" method="POST" class="form-signin"  >
+											<p>
+											<span class="info"><label for="username">用户名</label></span>
+											<span class="info_input">
+											<input type="text" name="username"  id="username" class="login_input1"  placeholder=" Username" />
+											</span>
+											</p>
+											
+											<p>
+												<span class="info">	<label for="phoneNo">手机号</label></span>
+												<span class="info_input"><input type="text" name="phoneNo"  id="phoneNo" class="login_input1"  placeholder=" phoneNo" /></span>
+											</p>
+											
+											 	<p>
+												<span class="info">	<label for="password2">密码</label></span>
+												<span class="info_input"><input type="password" name="password"  id="password2" class="login_input2"  placeholder=" 密码" /></span>
+												</p>
+												
+												<p>
+												<span class="info">	<label for="code">验证码</label></span>
+												<span class="info_code"><input type="text" name="code"  id="code" class="login_input2"  placeholder=" 验证码" /></span>
+												 <a href="#" class="info_code_send">接收验证码</a> 
+												</p>
+												
+												<span class="info">	</span>
+												<span class="info_input_button">
+													<button type="submit" class="btn">注册</button> 
+												 </span>
+											<input name="TSE" type="hidden" value="{$arr_ret.TSE}"> 
+											<input name="REF" type="hidden" value="{$arr_ret.REF}"> 
+											 
+											
+										 <div style="clear:both;"></div>
+										   </form>
+					<div style="clear:both;"></div>
+			</div>
+			<!-- shop_content end-->
+		</div>
+	
+		
+		<!-- shop end-->
+
+		<div id="footer">
+			这是页脚
+		</div>
+		
+	</div>
+	<!-- well_main end-->
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/placeholder.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+						
+				$('.carousel').carousel({
+						  interval: 2000
+						});
+						
+			});
+ 	 
+	</script>
+	
+	 
+</body>
+</html>
