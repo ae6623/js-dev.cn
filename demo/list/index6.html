@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+    	<script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/easyTemplate.js" type="text/javascript"></script>	
+	</head>
+	<body>
+		<div class="localSign"></div>
+	</body>
+	<script id="templateSign" type="text/x-easy-template">
+<#macro bjTest data>
+	<#list data as list>
+        <img src="img${list_index}.jpg" />
+	</#list>
+    
+    <#list data as list>
+        <img src="${list.name}.jpg" alt="${list.fileId}" />
+	</#list>
+    
+</#macro>
+	</script>
+	<script type="text/javascript">
+    
+        var navigationLinkData = [
+	       	{fileId:'1',name:'a1'} ,
+            {fileId:'2',name:'a2'} ,
+            {fileId:'3',name:'a3'} ,
+            {fileId:'4',name:'a4'} ,
+            {fileId:'5',name:'a5'} ,
+            {fileId:'6',name:'a6'}  
+        ];
+        
+		var getNavContent = function(data){
+			if(!data || !data.length){
+				return '';
+			}
+			var res = easyTemplate($('#templateSign').html(), data).toString();
+			return res;
+		};
+        
+		$('.localSign').html(getNavContent(navigationLinkData));
+	</script>
+</html>

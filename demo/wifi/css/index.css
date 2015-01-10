@@ -1,0 +1,282 @@
+* {
+margin:0;
+padding:0;
+}
+
+body {
+	font:normal 100% Helvetica, Arial, sans-serif;
+	background:#fff;
+	width:100%;
+}
+
+ul {
+list-style:none;
+list-style-type:none;
+}
+
+a {
+	text-decoration:none;
+}
+
+
+
+#well_main {
+width:100%;
+height:auto;
+min-height:350px;
+margin:0 auto;
+ overflow:hidden;
+}
+
+#myCarousel img {
+max-width:100%;
+width:100%;
+height:auto;
+}
+#myCarousel{
+	height:auto;
+}
+
+#shop {
+width:100%;
+margin:0 auto;
+position:relative;
+}
+
+ 
+ 
+#shop_content {
+	margin:0 auto;
+	font-family:BebasNeueRegular, 'Arial Narrow', Arial, sans-serif;
+	color:#7cbcd6;
+	text-shadow:1px 1px 1px rgba(0,0,0,0.1);
+	float:left;
+	height:100%;
+	width:100%;
+	min-height:200px;
+	border-bottom:4px #ccc solid;
+	margin-top:-30px;
+}
+ 
+ 
+ #shop_left{
+	width:15%;
+	height:100%;
+	float:left;
+	min-height:200px;
+	
+ }
+ 
+ #shop_right{
+ 	width:80%;
+	height:100%;
+	float:left;
+	min-height:200px;
+	border-left:4px #ccc solid;
+ }
+ 
+  #shop_right div{
+	  width:100%;
+	  height:auto;
+	  float:left;
+	  padding-left:10px;
+	  padding-top:5px;
+ 
+  }
+ 
+ #shop_right1{
+	position:relative;
+	min-height:20px;
+	color:black;
+	padding-top:0px;
+ }
+ 
+ #shop_right1 h2{
+	height:auto;
+	font-size:1.2em;
+	 padding-left:35px;
+ }
+ 
+  #shop_right2{
+	 position:relative;
+	 height:auto;
+	min-height:50px;
+	font-size:1.0em;
+	
+ }
+ 
+   #shop_right3{
+	 position:relative;
+	 height:auto;
+	min-height:30px;
+	padding-bottom:20px;
+	font-size:1.0em;
+	color:#8C8C8C;
+	
+ }
+ 
+  .tipleft_big{
+	float:left;
+	position:absolute;
+	top:-30px;
+	left:-50px;
+	z-index:1000;
+	/*margin-left:-28px;*/
+ }
+
+   .tipleft_big img{
+		max-width:80px; /* 最大宽度80px*/ 
+		width:80px; /* 图片的大小80px*/ 
+   } 
+ 
+ .tipleft{
+	float:left;
+	position:absolute;
+    width:50px;
+	top:20px;
+	left:-30px;
+	/*margin-left:-28px;*/
+ }
+ 
+  .tipleft2{
+	float:left;
+	position:absolute;
+	padding-top:20px;
+	top:-5px;
+	left:-30px;
+	/*margin-left:-28px;*/
+ }
+ 
+ .shop_right_info{
+	display:block;
+	font-size:14px;
+	padding-left:30px;
+	 padding-top:5px;
+ }
+ 
+ .shop_right_info a{
+    display:block;
+    color:#3dc9b3;
+    font-size:12px;
+    text-decoration:underline;
+ }
+ 
+ 
+ .shop_right_info p{
+	color:#8C8C8C;
+	padding-bottom:0px;
+ }
+ 
+ #shop_right3{
+	min-height:30px;
+	margin-bottom:10px;
+ }
+ 
+ .shop_mark_time{
+	padding:2px;
+	color:red;
+	font-weight:blod;
+ }
+ 
+
+ 
+#footer {
+	float:left;
+	width:100%;
+	height:auto;
+	min-height:50px;
+	margin-top:5px;
+	padding-left:10%;
+	margin-bottom:10px;
+ }
+
+ .footer2{
+        position:fixed;
+        right:0px;
+        _position:absolute;
+        _right:17px;
+        bottom:0px;
+        background:#000;
+        color:#fff;
+        border-top:1px solid #fff;
+        display:block;
+        width:100%;
+        text-align:right;
+        filter:alpha(opacity=70);       /* IE */
+        opacity: .7;           /* 支持CSS3的浏览器（FF 1.5也支持）*/
+        font-weight:bold;
+ }
+ 
+ 
+ /*按钮*/
+ 
+ 
+ .blue{
+    /*GRADIENT*/  
+  background: #00b7ea; /* Old browsers */
+  background: -moz-linear-gradient(top, #00b7ea 0%, #009ec3 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#009ec3)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #00b7ea 0%,#009ec3 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #00b7ea 0%,#009ec3 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #00b7ea 0%,#009ec3 100%); /* IE10+ */
+  background: linear-gradient(top, #00b7ea 0%,#009ec3 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 ); /* IE6-9 */
+ }
+ 
+ .button {
+  height:auto	;
+  float:left;
+  margin-left:5px;
+}
+
+.button a {
+  display: block;
+  height:50px;
+  
+  /*TYPE*/
+  color: white;
+  font: 10px/50px Helvetica, Verdana, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  
+  -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+     -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+          box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  
+
+ 
+}
+
+/*ACTIVE*/
+.button a:active {
+background: #00b7ea; /* Old browsers */
+background: -moz-linear-gradient(top,  #00b7ea 36%, #009ec3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(36%,#00b7ea), color-stop(100%,#009ec3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #00b7ea 36%,#009ec3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #00b7ea 36%,#009ec3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #00b7ea 36%,#009ec3 100%); /* IE10+ */
+background: linear-gradient(top,  #00b7ea 36%,#009ec3 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+.orange{
+   /*GRADIENT*/  
+  background: #FD7D22; /* Old browsers */
+}
+
+
+.max a{
+	width:120px;
+}
+
+.blue a{
+	width: 60px;
+}

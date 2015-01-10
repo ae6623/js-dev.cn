@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+    	<script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/easyTemplate.js" type="text/javascript"></script>	
+	</head>
+	<body>
+		<div class="localSign"></div>
+		----------------------------------
+		<br>
+		bijian
+		<br>
+		----------------------------------
+		<br>
+		<div class="localSign"></div>
+	</body>
+	<script id="templateSign" type="text/x-easy-template">
+<#macro bjTest data>
+	<#list data as list>
+		<li>这里是第${list_index+1}列：${list.code},${list.name}</li>
+	</#list>
+</#macro>
+	</script>
+	<script type="text/javascript">
+		var navigationLinkData = [
+	       	{code:'one',name:'一'},{code:'two',name:'二'},{code:'three',name:'三'},{code:'four',name:'四'},{code:'five',name:'五'},{code:'six',name:'六'},{code:'six',name:'7'}
+        ];
+		var getNavContent = function(data){
+			if(!data || !data.length){
+				return '';
+			}
+			var res = easyTemplate($('#templateSign').html(), data).toString();
+			console.log(res);
+			return res;
+		};
+		$('.localSign').html(getNavContent(navigationLinkData));
+	</script>
+</html>
