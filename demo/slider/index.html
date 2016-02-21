@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--申明当前页面的编码集-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--网页标题-->
+    <title>slider</title>
+    <!--网页关键词-->
+    <meta name="keywords" content="" />
+    <!--网页描述-->
+    <meta name="description" content="" />
+    <!--适配当前屏幕-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!--禁止自动识别电话号码-->
+    <meta name="format-detection" content="telephone=no" />
+    <!--禁止自动识别邮箱-->
+    <meta content="email=no" name="format-detection" />
+    <!--iphone中safari私有meta标签,
+        允许全屏模式浏览,隐藏浏览器导航栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--iphone中safari顶端的状态条的样式black(黑色)-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style type="text/css">
+        /*reset 重置*/
+        body,ul,ol,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,
+        td,th,button,strong,em,select,video,canvas{margin:0;padding:0;}
+        li{list-style:none;vertical-align:top;}
+        table{ border-collapse:collapse;}
+        textarea{resize:none;overflow:auto;}
+        img{ border:none; vertical-align:middle;}
+        em{ font-style:normal;}
+        a{ text-decoration:none;}
+        a,input{
+            -webkit-appearance: none;/*屏蔽阴影*/
+            -webkit-tap-highlight-color:rgba(0,0,0,0);
+            /*ios android去除自带阴影的样式*/
+        }
+        a, img {
+            /* 禁止长按链接与图片弹出菜单 */
+            -webkit-touch-callout: none;
+        }
+        html, body {
+            /* 禁止选中文本(如无文本选中需求,此为必选项) */
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        /*public*/
+        html {
+            font-size : 20px;
+        }
+        @media only screen and (min-width: 401px){
+            html {
+                font-size: 25px !important;
+            }
+        }
+        @media only screen and (min-width: 428px){
+            html {
+                font-size: 26.75px !important;
+            }
+        }
+        @media only screen and (min-width: 481px){
+            html {
+                font-size: 30px !important;
+            }
+        }
+        @media only screen and (min-width: 569px){
+            html {
+                font-size: 35px !important;
+            }
+        }
+        @media only screen and (min-width: 641px){
+            html {
+                font-size: 40px !important;
+            }
+        }
+        body{font-family: "Helvetica Neue", Helvetica, "STHeiTi", sans-serif;
+            overflow-x:hidden; overflow-y:auto; font-size:0.7rem;
+        }
+        .clear{zoom:1;}
+        .clear:after{content:''; display:block; clear:both;}
+        .fl{float:left;}
+        .fr{float:right;}
+        .viewport{ max-width:640px; margin:0 auto; overflow-x:hidden;}
+
+        #slider{width:400px;position: relative;overflow: hidden;}
+        #slider-head{width:400px;}
+        #silder-head>div{float: left;height: 20px;line-height: 20px;vertical-align: middle;}
+        
+        #slider-head-button{width:350px;}
+        #slider-head-button span{font-size: 12px;display: block;float: left;margin:3px;}
+        
+        #slider-content ul{position:relative;height: 150px;width:2000px;}
+        #slider-content li{position:relative;width:200px;height: 150px;float: left;margin-right:5px;}
+        #slider-content  .li1{background-color:#3399cc;}
+        #slider-content  .li2{background-color: #cc3333;}
+        #slider-head-dots{ }
+        #slider-head-dots li{display: inline-block; width: 10px; height: 10px; margin: 5px 0px; text-indent: -999em; border: 2px solid #fff; border-radius: 6px; cursor: pointer; opacity: .4; -webkit-transition: background .5s, opacity .5s; -moz-transition: background .5s, opacity .5s; transition: background .5s, opacity .5s; background: #000;} 
+
+        #slider-head-dots li.active,li:hover {
+            background: #000;
+            opacity: 1;
+        }
+
+        </style> 
+       
+        </head>
+<body>
+    <div>
+        <div id="main">
+            <div id="slider">
+                <div id="silder-head">
+                    <div id="slider-head-button"><span class="l"> <a href="#" class="pri"><</a></span><span class="r"> <a href="#" class="next">></a> </span></div>
+                    <div id="slider-head-dots">
+                        <ol class="dots">
+                            <li class="dot active">1</li>
+                            <li class="dot">2</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div id="slider-content">
+                    <ul>
+                        <li class="li1">1</li>
+                        <li class="li2">2</li>
+                        <li class="li1">3</li>
+                        <li class="li2">4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(function() {
+        console.log('author:Luo Yu');
+
+        var nav = $('#slider-head-dots ol').find('li');
+        var content = $("#slider-content").find('ul');
+        var head_button = $("#slider-head-button").find("a");
+
+        var imgWidth = content.find("li").eq(0).width() + 5;
+
+        nav.click(function() {
+            var me = $(this);
+            var index = me.index();
+            nav.removeClass("active");
+            me.addClass("active");
+            //轮播
+            content.animate({
+                "left": -imgWidth * 2 * index
+            });
+        });
+
+        head_button.click(function(){
+            var me = $(this);
+            var index = me.attr("class");
+            if(index == "pri"){
+                index = 0;
+            }else{
+                index = 1;
+            }
+
+            nav.removeClass("active");
+            nav.eq(index).addClass("active");
+            content.animate({
+                "left": -imgWidth * 2 * index
+            });
+            
+        });
+    });
+    </script>
+</body>
+
+</html>
