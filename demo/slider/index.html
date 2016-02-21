@@ -81,7 +81,8 @@
         .fl{float:left;}
         .fr{float:right;}
         .viewport{ max-width:640px; margin:0 auto; overflow-x:hidden;}
-
+        
+        /*slider start*/
         #slider{width:400px;position: relative;overflow: hidden;}
         #slider-head{width:400px;}
         #silder-head>div{float: left;height: 20px;line-height: 20px;vertical-align: middle;}
@@ -100,6 +101,7 @@
             background: #000;
             opacity: 1;
         }
+        /*slider end*/
 
         </style> 
        
@@ -130,17 +132,20 @@
         </div>
     </div>
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script type="text/javascript">
     $(function() {
         console.log('author:Luo Yu');
-
+        //拿到小圆点
         var nav = $('#slider-head-dots ol').find('li');
+        //轮播内容
         var content = $("#slider-content").find('ul');
+        //按钮 左右剪头，我没用图片，用了大于号小于号临时将就一下
         var head_button = $("#slider-head-button").find("a");
-
+        //第一张图片的宽度 
         var imgWidth = content.find("li").eq(0).width() + 5;
 
+        //点击了小圆点
         nav.click(function() {
             var me = $(this);
             var index = me.index();
@@ -152,12 +157,13 @@
             });
         });
 
-        head_button.click(function(){
+        //点击了左右剪头
+        head_button.click(function() {
             var me = $(this);
             var index = me.attr("class");
-            if(index == "pri"){
+            if (index == "pri") {
                 index = 0;
-            }else{
+            } else {
                 index = 1;
             }
 
@@ -166,10 +172,9 @@
             content.animate({
                 "left": -imgWidth * 2 * index
             });
-            
+
         });
     });
     </script>
 </body>
-
 </html>
